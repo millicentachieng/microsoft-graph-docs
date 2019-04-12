@@ -3,6 +3,7 @@ Param(
     [string]$file
 )
 $apiDoctorVersion = $env:APIDOCTOR_VERSION
+$apiDoctorBranch = $env:APIDOCTOR_BRANCH
 $repoPath = (Get-Location).Path
 $downloadedApiDoctor = $false
 $downloadedNuGet = $false
@@ -43,9 +44,13 @@ else {
 	
 	if ($apiDoctorVersion.StartsWith("https://"))
 	{
+        if([string]::IsNullOrWhiteSpace($apiDoctorBranch)){
+			$apiDoctorBranch = "master"
+		}
+
 		# Download ApiDoctor from GitHub	
 		Write-Host "Cloning API Doctor repository from GitHub"
-		& git clone -b master $apiDoctorVersion --recurse-submodules "$apidocPath\SourceCode"
+		& git clone -b $apiDoctorBranch $apiDoctorVersion --recurse-submodules "$apidocPath\SourceCode"
 		$downloadedApiDoctor = $true
 		
 		$nugetParams = "restore", "$apidocPath\SourceCode"
