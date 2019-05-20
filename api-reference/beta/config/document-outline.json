@@ -1,0 +1,121 @@
+{
+  "apiPageType": [
+    {
+      "title": "*",
+      "level": 1,
+      "required": true,
+      "headers": [
+        {
+          "title": "Permissions",
+          "level": 2,
+          "required": true
+        },
+        {
+          "title": "HTTP request",
+          "level": 2,
+          "required": true
+        },
+        {
+          "title": "Path parameters",
+          "level": 2,
+          "required": false
+        },
+        {
+          "title": "Function parameters",
+          "level": 2,
+          "required": false
+        },
+        {
+          "title": "Query parameters",
+          "level": 2,
+          "required": false,
+          "headers": [
+            {
+              "title": "OData query parameters",
+              "level": 3,
+              "required": false
+            }
+          ]
+        },
+        {
+          "title": "Optional query parameters",
+          "level": 2,
+          "required": false
+        },
+        {
+          "title": "Request headers",
+          "level": 2,
+          "required": true
+        },
+        {
+          "title": "Request body",
+          "level": 2,
+          "required": true
+        },
+        {
+          "title": "Response",
+          "level": 2,
+          "required": true
+        },
+        {
+          "title": "Examples",
+          "level": 2,
+          "required": true
+        },
+        {
+          "title": "See also",
+          "level": 2,
+          "required": false
+        }
+      ]
+    }
+  ],
+  "resourcePageType": [
+    {
+      "title": "* resource type",
+      "level": 1,
+      "required": true,
+      "headers": [
+        {
+          "title": "Methods",
+          "level": 2,
+          "required": false
+        },
+        {
+          "title": "Properties",
+          "level": 2,
+          "required": true
+        },
+        {
+          "title": "Relationships",
+          "level": 2,
+          "required": false
+        },
+        {
+          "title": "JSON  representation",
+          "level": 2,
+          "required": true
+        },
+        {
+          "title": "See also",
+          "level": 2,
+          "required": false
+        }
+      ]
+    }
+  ],
+  "enumPageType": [
+    {
+      "title": "* enum type",
+      "level": 1,
+      "required": true,
+      "headers": [
+        {
+          "title": "Members",
+          "level": 2,
+          "required": true
+        }
+      ]
+    }
+  ]
+}
